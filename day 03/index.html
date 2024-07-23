@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <header></header>
+    <fieldset>
+      <form action="">
+        <h1>Schedule a call</h1>
+
+        <label for="Name">First Name :</label>
+        <input
+          type="text"
+          name="Name"
+          value="Defualt Name"
+          id="Name"
+        /><br /><br />
+
+        <label
+          >Email:
+          <input type="email" name="email" placeholder="abc@gmail.com" required/>
+        </label>
+
+        <br /><br />
+        <label
+          >Date:
+          <input type="date" />
+        </label>
+
+        <br /><br />
+
+        <label
+          >Time:
+          <input type="time" />
+        </label>
+
+        <br /><br />
+        <label> Male<input type="radio" name="Gender" required/><br /> </label>
+        <label> Female <input type="radio" name="Gender"  /> </label>
+
+        <br /><br />
+
+        <select>
+          Select Doctor
+          <option value="">--please choosecan option--</option>
+          <option value="abc">Vinay Gupta</option>
+          <option value="bcd">KM Agarwal</option>
+          <option value="efg">Mansi</option>
+          </select>
+          
+        </select>
+        <br /><br />
+        <label>Reason for visit:
+          <textarea name="" id="" rows="10"></textarea>
+        </label>
+<br><br>
+        <input type="submit" />
+
+<br><br>
+
+        <input type="button" value="Click Me" onclick="alert('Sample Alert')" />
+
+        <br><br>
+        <input type="reset">
+      </form>
+    </fieldset>
+  </body>
+</html>

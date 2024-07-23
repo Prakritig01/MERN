@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order Page</title>
+    <style>
+        .parent{
+            position: relative;
+        }
+        .child{
+            position: absolute;
+            left: 120px;
+        }
+        #para{
+            position: relative;
+            top: 40px;
+        }
+        #reset,#submit{
+            position: relative;
+            top: 70px;
+        }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <form action="" class="parent">
+        <label>
+          Name:
+          <input type="text" name="name" required class="child" />
+        </label>
+        <br /><br />
+
+        <label
+          >Phone No.:
+          <input type="tel" name="phone" required class="child"/>
+        </label>
+        <br /><br />
+
+        <label
+          >Address:
+          <input type="text" name="address" required class="child"/>
+        </label>
+        <br /><br />
+
+        <label
+          >Email:
+          <input type="email" name="email" class="child"/>
+        </label>
+        <br/><br />
+
+        <label
+          >Date of Delivery:
+          <input type="Date" class="child" />
+        </label>
+        <br /><br />
+
+        <label
+          >Type of Food:
+          <select multiple class="child">
+            <option value="chinese">Chinese</option>
+            <option value="italian">Italian</option>
+            <option value="japanese">Japenese</option>
+            <option value="indian">Indian</option>
+            <option value="tibetian">Tibetian</option>
+          </select>
+          
+          <p id="para">Please hold down the Ctrl button to select multiple options.</p>
+          <br>
+        </label>
+        <br/>
+
+        <label>Feedback:
+           <textarea rows="5" placeholder="Enter feedback" class="child"></textarea>
+        </label>
+        <br><br>
+        <input type="reset" id="reset">
+        <br><br>
+        <input type="submit" id="submit">
+
+    </form>
+      <br><br><br><br><br>
+    </fieldset>
+  </body>
+</html>
