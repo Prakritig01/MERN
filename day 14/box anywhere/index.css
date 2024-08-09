@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vw;
+    width: 100vw;
+    border: 2px solid black;
+    position: relative;
+}
+
+.nayaDibba{
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    border: 1px solid black;
+}

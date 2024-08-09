@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navi{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    /* position: relative;
+    left: 50px; */
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    height: 50px;
+    padding: 5px;
+    width: 95%;
+
+}
+a{
+    font-size: 2em;
+    
+}

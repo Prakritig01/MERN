@@ -1,0 +1,113 @@
+*{
+    padding: 0;;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    /* background-size: cover; Options: contain, cover, auto */
+    /* background-position: center center; */
+    /* background-repeat: no-repeat; */
+    filter: blur(0px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Ensure the background stays behind other content */
+}
+.container{
+    background-color: black;
+    width: 25vw;
+    height: 40vw;
+    margin: 50px auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    box-shadow: 1px 0px 10px 3px black;
+    padding-bottom: 20px;
+}
+.input{    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+}
+
+
+input{
+    width: 95%;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+}
+
+.row1,.row2,.row3,.row4,.row5{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 80px;
+    
+    padding: 0;
+    
+}
+
+button{
+    height: 55px;
+    width:55px;
+    margin: 20px;
+    border-radius: 40px;
+    text-align: center;
+    background-color: rgb(51,51,51);
+    color: whitesmoke;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 0px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(86, 83, 83);
+}
+button:active{
+    background-color: rgb(86, 83, 83);
+}
+.row1 button{
+    background-color: rgb(165, 165, 165);
+    color: black;
+}
+.row1 button:hover{
+    background-color: rgb(98, 96, 96);
+    color: black;
+}
+.row1 button:active{
+    background-color: rgb(70, 68, 68);
+    color: black;
+}
+
+
+button.last{
+    background-color: rgb(255, 159, 10);
+}
+button.special:hover{
+   background-color:  rgb(249, 199, 124);
+}
+button.last:active{
+    background-color: rgb(224, 137, 5);
+}
+#zero{
+    width: 40%;
+}

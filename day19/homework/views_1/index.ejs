@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS-PRACTICE <%= title%></title>
+    <link rel="stylesheet" href="./index-style.css" />
+  </head>
+  <body>
+    <div class="navi"><%- include('partials/navoo') %></div>
+
+    <h1>This is the index page and it will display blogs if presnt.</h1>
+
+    <% if(blogs.length > 0){ %>
+    <p><%= "The blogs present are :"  %></p>
+        <% for(let i = 0; i< blogs.length;i++){ %>
+            <%  let obj = blogs[i] %>
+        <% for(let key in obj){ %>
+            <p><%= key%> = <%= obj[key] %></p>
+        <%}  %> <br><br>
+        <% } %> 
+    <% } else { %>
+    <p><%=" No blogs present. "%></p>
+    <% } %>
+  </body>
+</html>

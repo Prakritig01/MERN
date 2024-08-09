@@ -1,0 +1,74 @@
+ question 1 :
+ <% for(let i = 0; i< 21; i++){ %>
+        <p><%= i  %></p> 
+     <% } %>
+
+
+
+
+question2 :
+<%  var today = new Date(); %>
+    <%  var hour = today.getHours(); %>
+    <%  var prepand = (hour >= 12) ? 'PM' : 'AM'; %>
+    <% hour = (hour > 12) ? hour - 12 : hour; %>
+    <% if (prepand == 'PM' && hour <= 6) { %>
+        <p><%= "Good afternoon" %></p>
+    <% } else if (prepand == 'PM' && hour > 6) { %>
+        <p><%= "Good evening" %></p>
+    <% } else { %>
+        <p><%= "Good morning" %></p>
+    <% } %>
+
+
+
+question3:
+ <ul>
+        <% for(let i = 0; i< fruits.length; i++){ %>
+        
+        <li><%= fruits[i] %></li>
+        <% } %>
+    </ul>
+
+
+question :4
+<table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+
+      <% for(let i = 0; i< users.length; i++){%>
+      <tr>
+        <td><%= users[i].name %></td>
+        <td><%= users[i].age %></td>
+      </tr>
+      <% }%>
+    </table>
+
+
+
+question 7:
+<p><%= 'this is a <p>paragraph inside a para tag</p> and this is outside'   %></p> 
+ <p><%- 'this is a <p>paragraph inside a para tag</p> and this is outside'   %></p> 
+
+
+question 8:
+<%  if (isLoggedIn == true){ %>
+       <p> WELCOME TO OUR PAGE </p> 
+    <%  } else { %>
+      <button> Login </button>  
+      <% } %>
+
+
+question 9:
+<ul>
+    <%  for(let  i= 1; i<= 15; i++ ){ %>
+      <%  if((i%3 == 0) && (i%5 == 0)){ %>
+        <li>FizzBuzz</li>
+        <%  } else if (i%3 == 0) {%>
+          <li>Fizz</li>
+          <%  } else if(i%5==0) { %>
+            <li>Buzz</li>
+            <%  } %>
+          <%  } %>
+  </ul>

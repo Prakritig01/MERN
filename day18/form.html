@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with Separate Functions</title>
+    <style>
+        label, input{
+            display: block;
+            margin: 5px;
+        }
+        button{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form action="http://www.javatpoint.com/javascriptpages/valid.jsp" method="get" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" >
+
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass">
+
+        <label for="rePass">ReEnter Password</label>
+        <input type="password" name="rePass" id="rePass">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" >
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" >
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function validateForm(){
+        let name = document.querySelector('#name').value;
+        let password = document.querySelector('#pass').value;
+        let rePass = document.querySelector('#rePass').value;
+        let mail = document.querySelector('#email').value;
+        let phone = document.querySelector('#phone').value;
+
+        if(name == "" || password == "" || rePass == "" || mail == "" || phone == ""){
+            alert("All fields are mandatory");
+            return false;
+        }
+        else if(name.length <3){
+            alert("Enter a Valid Name");
+            return false;
+        }
+        else if(password.length < 6){
+            alert("Password must be at least 6 characters long.");  
+            return false;
+        }
+        else if(password != rePass){
+            alert("Re Enter correct password again")
+            return false;
+        }
+        else if(!mailValidation(mail)){
+            alert("Enter a valid Email address");
+            return false;
+        }
+        else if(phone.length <10){
+            alert("Enter a valid phone number");
+            return false;
+        }
+
+        function mailValidation(str){
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(str);
+        }
+        return true;
+
+      }
+    </script>
+</body>
+</html>

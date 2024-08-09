@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .weather-info {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <form id="weather-form">
+      <label for="city">Enter city name:</label>
+      <input type="text" id="city" name="city" required />
+      <button type="submit">Get Weather</button>
+    </form>
+    <div class="weather-info" id="weather-info"></div>
+
+    <script>
+        const url = "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=44de12b8de9e7d6ab1a241504f6b1366";
+        //console.log(url); 
+
+        function dummy(responseObject){
+            console.log('responseObject', responseObject);
+            console.log('dummy');
+        }
+
+
+        function failedPromise(){
+            console.log("failedPromise");
+        }
+        async function getWeather(){
+            //const apiResponsePromise = fetch(url);
+            //apiResponsePromise.then(dummy)                                      //pass a function,this is executes once a response is success
+                                                                                            
+            //.catch(failedPromise)
+            
+            
+
+
+            const responseVar = await fetch(url);                            //wait for promise to get completed first and then ectract the result
+            console.log(typeof responseVar);
+            //console.log("responseVar" , responseVar);
+
+            const jsonData = await responseVar.json();     //gives data in form of promise aur promisese data nikaalne ke liye awaut use karte hai
+            console.log("jsonData" , jsonData);
+            //console.log(typeof jsonData);
+        }
+
+        getWeather();
+    </script>
+  </body>
+</html>

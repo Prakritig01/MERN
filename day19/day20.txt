@@ -1,0 +1,35 @@
+function render_now(req,res,next){
+    // res.render('index' ,{variable_1: 'variable_1',title : 'Home',students});
+    res.send("heeelo");
+    next();
+}
+
+// app.use(render_now);
+
+// function middleware1(req,res,next){
+//     console.log('Middleware1');
+//     next();
+// }
+
+// function middleware2(req,res,next){
+//     console.log('middlewaree2');
+//     next();
+// }
+
+// app.use(middleware1,middleware2);
+
+//create an object where key is m1,m2 and values are function
+const middleware = {
+    m1 : function (req,res,next){
+        console.log('Middleware1');
+        next();
+    },
+    m2 : function (req,res,next){
+        console.log('middlewaree2');
+        next();
+    }
+
+};
+
+app.use(middleware.m1);
+app.use(middleware['m2']);
